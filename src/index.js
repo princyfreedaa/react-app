@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {BrowserRouter as Route} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import {ProductProvider} from './context';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
-  <React.StrictMode>
+    <ProductProvider>
+    <Route>
     <App />
-  </React.StrictMode>,
+    </Route>
+    </ProductProvider>,
   document.getElementById('root')
 );
 
